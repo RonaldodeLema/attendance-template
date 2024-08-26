@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"></link>
+    <link rel="stylesheet" href="/salary/salary.css"></link>
+    <title>Export Page</title>
+</head>
+<body>
+    <div class="full-screen-container">
+        <div class="container-export">
+            <div class="chooseMonth">
+                <div class="container-month">
+                    <div class="header">
+                        <div class="icons" onclick="handlePrevNext('prev')">
+                            <img src="/image/before.svg" alt="Previous">
+                        </div>
+                        <div class="current-date">{{currentDate}}</div>
+                        <div class="icons" onclick="handlePrevNext('next')">
+                            <img src="/image/next.svg" alt="Next">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="export">
+                <div class="component-4">
+                    <div class="container-text-attended">{{attended}}</div>
+                    <div class="circle"></div>
+                    <div class="attended">Số ngày làm</div>
+                </div>
+                <div class="component-5">
+                    <div class="container-text-latein">{{latein}}</div>
+                    <div class="circle-1"></div>
+                    <div class="late-in">Vào trễ</div>
+                </div>
+                <div class="component-6">
+                    <div class="container-text-earlyout">{{earlyout}}</div>
+                    <div class="circle-2"></div>
+                    <div class="early-out">Về sớm</div>
+                </div>
+                <div class="component-7">
+                    <div class="container-text-norecorded">{{norecord}}</div>
+                    <div class="circle-3"></div>
+                    <div class="no-recored">Không ghi nhận</div>
+                </div>
+            </div>
+
+            <div class="container-dashboard">
+                <div class="chart-wrapper">
+                    <div class="chart-container">
+                        <!-- Dynamically populated bars -->
+                        <div class="bar" style="height: 50px; background-color: #007bff;" onclick="handleBarClick('Label', 100)">100</div>
+                        <!-- Add more bars as needed -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="previous-month-data">
+                <div class="container-dashboard-title">
+                    <div class="section-title">So với tháng trước</div>
+                </div>
+                <div class="container-dashboard-previous">
+                    <div class="chart-wrapper-pre-1">
+                        <div class="circle-dashboard">
+                            <div class="circle-dashboard-left">
+                                <div class="circle-dashboard-1"></div>
+                            </div>
+                            <div class="circle-dashboard-right">{{comparisonData.attendedChange}}</div>
+                        </div>
+                        <div class="circle-dashboard">
+                            <div class="circle-dashboard-left">
+                                <div class="circle-dashboard-2"></div>
+                            </div>
+                            <div class="circle-dashboard-right">{{comparisonData.lateinChange}}</div>
+                        </div>
+                        <div class="circle-dashboard">
+                            <div class="circle-dashboard-left">
+                                <div class="circle-dashboard-3"></div>
+                            </div>
+                            <div class="circle-dashboard-right">{{comparisonData.earlyoutChange}}</div>
+                        </div>
+                        <div class="circle-dashboard">
+                            <div class="circle-dashboard-left">
+                                <div class="circle-dashboard-4"></div>
+                            </div>
+                            <div class="circle-dashboard-right">{{comparisonData.norecordChange}}</div>
+                        </div>
+                    </div>
+                    <div class="chart-wrapper-pre">
+                        <div class="chart-container">
+                            <!-- Dynamically populated bars -->
+                            <div class="bar" style="height: 50px; background-color: #007bff;" onclick="handleBarClick('Label', 100)">100</div>
+                            <!-- Add more bars as needed -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <button class="submitre" id="myButton" onclick="exportButton()">XUẤT PHIẾU LƯƠNG</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function handlePrevNext(direction) {
+            // Handle previous/next month logic
+            console.log('Navigate:', direction);
+        }
+
+        function handleBarClick(label, value) {
+            // Handle bar click logic
+            console.log('Bar clicked:', label, value);
+        }
+
+        function exportButton() {
+            // Handle export button logic
+            console.log('Export button clicked');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Form</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"></link>
+    <link rel="stylesheet" href="/approval-form/form.css">
+</head>
+<body>
+    <div class="full-screen-container">
+        <div class="container-1">
+            <div class="box-full">
+                <div class="container-4">
+                    <!-- Combobox chọn lý do -->
+                    <div class="option">
+                        <select id="optionPicker" onchange="onPickerChange()">
+                            <option value="">Chọn</option>
+                            <!-- Options will be populated here -->
+                        </select>
+                    </div>
+
+                    <!-- Ngày đi và Ngày về -->
+                    <div id="travelDates" class="hidden">
+                        <div class="option">
+                            <input type="date" id="firstDate" onchange="onFirstDateChange()">
+                            <label for="firstDate">Ngày đi</label>
+                        </div>
+                        <div class="option">
+                            <input type="date" id="endDate" onchange="onEndDateChange()">
+                            <label for="endDate">Ngày về</label>
+                        </div>
+                    </div>
+
+                    <!-- Chọn ngày tháng năm -->
+                    <div id="singleDate" class="hidden">
+                        <div class="option">
+                            <input type="date" id="date" onchange="onDateChange()">
+                            <label for="date">Ngày</label>
+                        </div>
+                    </div>
+
+                    <!-- Nhập lý do cụ thể -->
+                    <div>
+                        <textarea id="reason" placeholder="Nhập lý do" oninput="bindReasonInput()"></textarea>
+                    </div>
+
+                    <!-- Chọn minh chứng cụ thể -->
+                    <div>
+                        <button class="proof" onclick="chooseFile()">
+                            <span id="fileName">Chọn minh chứng tại đây</span>
+                        </button>
+                    </div>
+
+                    <!-- Gửi yêu cầu -->
+                    <div class="guirequest">
+                        <button id="submitButton" class="submitre" onclick="handleSubmit()" disabled>
+                            Gửi Yêu Cầu
+                        </button>
+                        <button id="loadingButton" class="submitree hidden" disabled>
+                            Đang gửi....
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

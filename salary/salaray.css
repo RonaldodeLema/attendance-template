@@ -1,0 +1,609 @@
+@import "../common/lib/weui.wxss";
+@import "https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css";
+body {
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.full-screen-container {
+  min-height: 100vh; /* Chiều cao tối thiểu bằng chiều cao của màn hình */
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  background-color: #f0f0f0; /* Màu nền tùy chỉnh */
+}
+.container-export-1{
+  background-color: #ffffff;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 400px;
+  margin-top: 20px;
+  padding: 20px;
+}
+.container-export {
+  /* background-color: #ffffff; */
+  background-image: url('https://res.cloudinary.com/dyww0lrly/image/upload/v1724117794/bitgroupimage_scnyt1.png');
+  background-size: cover; /* Để hình ảnh phủ kín khu vực */
+  background-position: center; /* Canh giữa hình ảnh */
+  background-repeat: no-repeat; /* Không lặp lại hình ảnh */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 400px;
+  margin-top: 20px;
+  padding: 20px;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header .icons {
+  display: flex;
+  margin:auto;
+}
+
+.header .icons text {
+  height: 38px;
+  width: 38px;
+  margin: 0 1px;
+  cursor: pointer;
+  color: #878787;
+  text-align: center;
+  line-height: 38px;
+  font-size: 1.9rem;
+  user-select: none;
+  border-radius: 50%;
+
+
+
+}
+
+.header .current-date {
+  font-size: 20px;
+  text-align: center;
+  justify-content: center;
+  font-weight: 500;
+  padding-right: 3vw;
+  padding-left: 3vw;
+}
+
+.material-symbols-rounded{
+  width: 20px;
+  height: 20px;
+  margin: 8px;
+
+}
+
+.content {
+  margin-top: 20px;
+}
+.page-body-info {
+  padding-bottom: 0;
+  height: 260px;
+}
+.userinfo-avatar {
+  border-radius: 128rpx;
+  width: 128rpx;
+  height: 128rpx;
+}
+.userinfo-nickname {
+  font-weight: bold;
+  margin-top: 20rpx;
+  font-size: 1em;
+}
+.total{
+  font-family: Arial, sans-serif;
+  font-size: 1.5em;
+  text-align:center;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.export {
+  /* border-radius: 10px;
+  background: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 auto;
+  box-sizing: border-box;
+  max-width: 400px;
+  margin: auto; */
+  /* margin-bottom: 20px;
+  padding-bottom: 10px; */
+  justify-content: space-between;
+  max-width: 400px;
+  margin: auto;
+  height: 200rpx;
+  margin-top: 10rpx;
+  display: flex;
+  align-items: center;
+  background-color: #f9f9f9;
+  border-radius: 15rpx;
+  box-shadow: 0rpx 0rpx 15rpx -10rpx #666;
+}
+.chooseMonth {
+  border-radius: 10px;
+  background: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.export .container {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+.export .component-4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  margin-left: 10px;
+}
+.export .container-text-attended {
+  margin: 0 18.8px 0 19.8px;
+  overflow-wrap: break-word;
+
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: -0.4px;
+  line-height: 1.4;
+  color: #616161;
+}
+.export .attended {
+  overflow-wrap: break-word;
+
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: -0.2px;
+  line-height: 1.4;
+  color: #616161;
+}
+.export .component-5 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+.export .container-text-latein {
+  margin: 0 14.1px 0 13.1px;
+  overflow-wrap: break-word;
+
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: -0.4px;
+  line-height: 1.4;
+  color: #616161;
+}
+.export .late-in {
+  overflow-wrap: break-word;
+
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: -0.2px;
+  line-height: 1.4;
+  color: #616161;
+}
+.export .component-6 {
+  /* margin-right: 41.4px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+.export .container-text-earlyout {
+  margin: 0 18.8px 0 16.8px;
+  overflow-wrap: break-word;
+
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: -0.4px;
+  line-height: 1.4;
+  color: #616161;
+}
+.export .early-out {
+  overflow-wrap: break-word;
+
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: -0.2px;
+  line-height: 1.4;
+  color: #616161;
+}
+.export .component-7 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  margin-right: 10px;
+}
+.export .container-text-norecorded {
+  margin-right: 1px;
+  overflow-wrap: break-word;
+
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: -0.4px;
+  line-height: 1.4;
+  color: #616161;
+}
+.export .no-recored {
+  overflow-wrap: break-word;
+
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: -0.2px;
+  line-height: 1.4;
+  color: #616161;
+}
+.picker-placeholder{
+  float: left; 
+  padding-left: 10px; 
+  line-height: 40px;
+}
+.container-month {
+  text-align: center;
+  flex-direction: row;
+  width: fit-content;
+  box-sizing: border-box;
+
+
+  max-width: 350px;
+  margin: 0 auto;
+  border-radius: 10px;
+  margin-bottom: 3px;
+}
+.block-header{
+  width: 800rpx;
+  height: 200rpx;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+  margin: 30rpx;
+  border-radius: 15rpx;
+  box-shadow: 0rpx 0rpx 18rpx -10rpx #666;
+
+}
+button.submitre:hover {
+  background-color: #099af5;
+}
+.btn-export{
+  width: 300px;
+  justify-content: center;
+  padding-top: 130rpx;
+}
+.circle{
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: #BFF6C3;
+}
+.circle-3{
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color:#FFC96F ;
+}
+.circle-1{
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: #ACE2E1;
+}
+.circle-2{
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color:  #FFE9D0;
+}
+.submitre{
+  float: left; 
+  width: 100%; 
+  border-radius: 11px;
+  background-color:  #045A97; 
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  justify-content: center;
+  margin-top: 10vw;
+}
+button.submitre:hover {
+  background-color: #034066;
+}
+
+/* CSS for swiping effect */
+.swipe-left {
+  animation: swipeLeft 0.5s forwards;
+}
+
+.swipe-right {
+  animation: swipeRight 0.5s forwards;
+}
+.form-container {
+  position: relative;
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+.swipe-right {
+  transform: translateX(100%);
+  opacity: 0;
+}
+.swipe-left {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+.reset {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+@keyframes swipeLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes swipeRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.container-dashboard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh; /* Chiều cao của khối chứa */
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background-color: #f5f5f5;
+  overflow: hidden; /* Ngăn chặn tràn ra khỏi khối chứa */
+  border-radius: 15rpx;
+}
+.container-dashboard-previous{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 40vh; /* Chiều cao của khối chứa */
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background-color: #f5f5f5;
+  overflow: hidden; /* Ngăn chặn tràn ra khỏi khối chứa */
+  border-radius: 15rpx;
+}
+
+.chart-wrapper {
+  width: 90%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 300px; /* Chiều cao của khối chứa biểu đồ */
+  position: relative;
+  border-bottom: 2px solid rgba(75, 192, 192, 1);
+  overflow: hidden; /* Ngăn chặn tràn ra khỏi khối chứa biểu đồ */ 
+}
+.chart-wrapper-pre {
+  width: 60%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 300px; /* Chiều cao của khối chứa biểu đồ */
+  position: relative;
+  border-bottom: 2px solid rgba(75, 192, 192, 1);
+  overflow: hidden; /* Ngăn chặn tràn ra khỏi khối chứa biểu đồ */ 
+  margin: 10px;
+}
+.chart-wrapper-pre-1 {
+  width: 40%;
+  align-items: flex-start;
+  justify-content: start;
+  height: 100%; /* Chiều cao của khối chứa biểu đồ */
+  position: relative;
+  overflow: hidden; /* Ngăn chặn tràn ra khỏi khối chứa biểu đồ */ 
+  margin: 10px;
+  padding-left: 7px;
+  padding-right: 10px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+
+.chart-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 70%;
+  height: 90%;
+  position: relative;
+}
+
+.bar {
+  /* border: 2px solid rgba(75, 192, 192, 1); */
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  text-align: center;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-left: 15px;
+  margin-right: 15px;
+  position: relative;
+  max-height: 100%; /* Chiều cao tối đa không vượt quá khối chứa */
+  flex: 1; /* Cho phép cột thay đổi kích thước linh hoạt */
+}
+.popup {
+  position: absolute;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  font-size: 10px;
+}
+.popup .popup-text {
+  font-size: 10px; /* Kích thước chữ nhỏ hơn */
+}
+
+.bar text {
+  position: absolute;
+  bottom: 100%; /* Đặt văn bản trên cột */
+  padding-bottom: 5px; /* Khoảng cách giữa cột và văn bản */
+  width: 100%;
+  left: 0;
+  font-size: 14px;
+  color: #333333;
+  border-radius: 4px;
+  text-align: center; /* Căn giữa văn bản */
+}
+
+.previous-month-data {
+  margin-top: 20px;
+}
+
+.section-title {
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.circle-dashboard{
+  height: 30px;
+  width: 100px;
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.circle-dashboard-1{
+  height: 30px;
+  width: 100px;
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.circle-dashboard-left{
+  height: 100%;
+  width: 30%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.circle-dashboard-right{
+  height: 100%;
+  width: 70%;
+  /* float: left; */
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.circle-dashboard-1{
+  height: 10px;
+  width: 80%;
+  border-radius: 10%;
+  background-color: #BFF6C3;
+}
+.circle-dashboard-2{
+  height: 10px;
+  width: 80%;
+  border-radius: 10%;
+  background-color: #ACE2E1;
+}
+.circle-dashboard-3{
+  height: 10px;
+  width: 80%;
+  border-radius: 10%;
+  background-color: #FFE9D0;
+}
+.circle-dashboard-4{
+  height: 10px;
+  width: 80%;
+  border-radius: 10%;
+  background-color: #FFC96F;
+}
+.circle-dashboard-text{
+  font-size: 12px;
+  width: 100%;
+  position: fixed;
+  float: right;
+  margin-left: 20px;
+
+}
+.container-dashboard-title{
+  height: 5vh; /* Chiều cao của khối chứa */
+  border-radius: 15rpx;
+  justify-content: center;
+  text-align: center;
+}
+
+
+
+
+
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .chart-wrapper {
+    height: 250px; /* Giảm chiều cao khối chứa biểu đồ cho màn hình nhỏ */
+  }
+  .chart-wrapper-pre {
+    height: 250px; /* Giảm chiều cao khối chứa biểu đồ cho màn hình nhỏ */
+  }
+
+  .bar {
+    width: 50px; /* Giảm chiều rộng của cột */
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .bar text {
+    font-size: 12px; /* Giảm kích thước font văn bản */
+  }
+}
+
+@media (max-width: 480px) {
+  .container-dashboard {
+    height: 35vh; /* Giảm chiều cao của khối chứa cho màn hình rất nhỏ */
+  }
+  .container-dashboard-previous{
+    height: 35vh; /* Giảm chiều cao của khối chứa cho màn hình rất nhỏ */
+  }
+
+  .chart-wrapper {
+    height: 200px; /* Giảm chiều cao khối chứa biểu đồ cho màn hình rất nhỏ */
+  }
+  .chart-wrapper-pre {
+    height: 200px; /* Giảm chiều cao khối chứa biểu đồ cho màn hình nhỏ */
+  }
+
+  .bar {
+    width: 15px; /* Giảm chiều rộng của cột hơn nữa */
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .bar text {
+    font-size: 10px; /* Giảm kích thước font văn bản cho màn hình rất nhỏ */
+  }
+
+  .info-popup {
+    padding: 8px; /* Giảm padding của popup cho màn hình nhỏ */
+  }
+}
