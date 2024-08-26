@@ -14,43 +14,48 @@
                 <div class="container-4">
                     <!-- Combobox chọn lý do -->
                     <div class="option">
-                        <select id="optionPicker" onchange="onPickerChange()">
+                        <select class="select-option" id="optionPicker" onchange="onPickerChange()">
                             <option value="">Chọn</option>
-                            <!-- Options will be populated here -->
                         </select>
                     </div>
 
                     <!-- Ngày đi và Ngày về -->
                     <div id="travelDates" class="hidden">
                         <div class="option">
-                            <input type="date" id="firstDate" onchange="onFirstDateChange()">
-                            <label for="firstDate">Ngày đi</label>
+                            <label for="firstDate">Ngày đi: </label>
+                            <input class="input-date" type="date" id="firstDate" onchange="onFirstDateChange()">
                         </div>
                         <div class="option">
-                            <input type="date" id="endDate" onchange="onEndDateChange()">
                             <label for="endDate">Ngày về</label>
+                            <input class="input-date" type="date" id="endDate" onchange="onEndDateChange()">
                         </div>
                     </div>
 
                     <!-- Chọn ngày tháng năm -->
                     <div id="singleDate" class="hidden">
                         <div class="option">
-                            <input type="date" id="date" onchange="onDateChange()">
                             <label for="date">Ngày</label>
+                            <input type="date" id="date" onchange="onDateChange()">
                         </div>
                     </div>
 
                     <!-- Nhập lý do cụ thể -->
-                    <div>
-                        <textarea id="reason" placeholder="Nhập lý do" oninput="bindReasonInput()"></textarea>
+                    <div >
+                        <textarea class="option" id="reason" placeholder="Nhập lý do" oninput="bindReasonInput()"></textarea>
                     </div>
 
                     <!-- Chọn minh chứng cụ thể -->
-                    <div>
+                    <!-- <div class="proof-btn">
                         <button class="proof" onclick="chooseFile()">
                             <span id="fileName">Chọn minh chứng tại đây</span>
                         </button>
+                    </div> -->
+                    <div class="guirequest">
+                        <button id="submitButton" class="submitre" onclick="handleSubmit()" disabled>
+                            <span id="fileName">Chọn minh chứng tại đây</span>
+                        </button>
                     </div>
+
 
                     <!-- Gửi yêu cầu -->
                     <div class="guirequest">
