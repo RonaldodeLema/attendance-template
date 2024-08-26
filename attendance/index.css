@@ -15,6 +15,10 @@ body {
     flex-direction: column;
     background-color: #f0f0f0; /* Màu nền tùy chỉnh */
   }
+  .center-button{
+    justify-content: center;
+    display: flex;
+  }
   .container {
       /* background-color: #fff; */
       background-image: url('https://res.cloudinary.com/dyww0lrly/image/upload/v1724117794/bitgroupimage_scnyt1.png');
@@ -27,6 +31,10 @@ body {
       max-width: 400px;
       margin-top: 20px;
       padding: 20px;
+      height: 600px; 
+      flex-direction: column;
+      display: flex;
+      justify-content: space-between;
   }
   .header {
       display: flex;
@@ -191,24 +199,31 @@ body {
 }
 .footer {
   background-color: #f0f0f0;
+  border-radius: 10px;
+  width: 150px;
+
+}
+.footer-box {
   width: 100%;
-  max-width: 400px;
-  text-align: center;
   justify-content: center;
   display: flex;
-  align-items: center;
-  flex-direction: column;
+
 }
 
 .footer-version {
   background-color: #f0f0f0;
   border-radius: 10px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  width: 30%;
-  text-align: center;
-  margin: 10rpx;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  font-size: 25rpx;
+  align-items: center;
+  flex-direction: column;
+  padding: 5px;
+
 }
 
-.version-app{
-  font-size: 25rpx;
+p {
+  margin: 0;
 }

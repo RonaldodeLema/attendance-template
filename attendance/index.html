@@ -1,65 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trang điểm danh</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"></link>
-    <link rel="stylesheet" href="./index.css"></link>
+    <link rel="stylesheet" href="index.css"></link>
 </head>
 <body>
     <div class="full-screen-container" ontouchstart="touchStart(event)" ontouchmove="touchMove(event)"
         ontouchend="touchEnd(event)">
         <div class="container">
+            <div>
             <div class="header mb-3">
                 <div>
-                    <img class="userinfo-avatar" src="{{userInfo.avatarUrl}}" alt="User Avatar">
-                    <span class="userinfo-nickname">Hi, {{userInfo.nickName}}<br><span
-                            class="bit">{{currentCompany}}</span></span>
+                    <img class="userinfo-avatar" src="" alt="User Avatar">
+                    <span class="userinfo-nickname">Hi, <br><span
+                            class="bit"></span></span>
                 </div>
             </div>
             <div class="content mt-3">
-                <!-- <div>
+
+                <div>
                     <div class="time-info">
                         <span class="label">Giờ bắt đầu {{timeRealClockIn}}</span>
                     </div>
                     <div class="clock-in" id="clockInSection">
                         <span class="time">{{currentTime}}</span>
-                        <div>
-                            <button
-                                class="disable btn btn-block w-50 custom-button">Vào</button>
-                            <button
-                                class="disable btn btn-block w-50 custom-button">Vào Trễ</button>
+                        <div >
+                            <!-- <button
+                                class="disable btn btn-block w-50 custom-button">Vào</button> -->
+                            <!-- <button
+                                class="disable btn btn-block w-50 custom-button">Vào Trễ</button> -->
                         </div>
-                        <div>
+                        <div class="center-button">
                             <button 
                                 class="btn btn-block w-50 custom-button" onclick="clockInButton()">Vào</button>
-                            <button
-                                class="btn btn-block w-50 custom-button" onclick="clockInButton()">Vào Trễ</button>
+                            <!-- <button
+                                class="btn btn-block w-50 custom-button" onclick="clockInButton()">Vào Trễ</button> -->
                         </div>
                         <span class="nn">Trong phạm vi: {{currentLocation}}</span>
                         <span class="nn"><br>Wifi: {{currentWifi}}</span>
                     </div>
                 </div>
+
                 <div>
-                    <div class="attendance-record">
+                    <!-- <div class="attendance-record">
                         <span class="at">Vào lúc {{clockInTime}}<br></span>
                         <span class="dc">{{currentLocation}}</span>
                         <span class="nn"><br>Wifi: {{currentWifi}}</span>
-                    </div>
+                    </div> -->
                     <div class="clock-out" id="clockOutSection">
                         <span class="time">{{currentTime}}</span>
-                        <div>
+                        <!-- <div>
                             <button
                                 class="disable btn btn-block w-50 custom-button">Về</button>
                             <button class="disable btn btn-block w-50 custom-button">Về Sớm</button>
-                        </div>
-                        <div>
+                        </div> -->
+                        <div class="center-button">
                             <button
                                 class="btn btn-block w-50 custom-button" onclick="clockOutButton()">Về</button>
-                            <button
-                                class="btn btn-block w-50 custom-button" onclick="clockOutButton()">Về Sớm</button>
+                            <!-- <button
+                                class="btn btn-block w-50 custom-button" onclick="clockOutButton()">Về Sớm</button> -->
                         </div>
                         <span class="nn">Trong phạm vi: {{currentLocation}}</span>
                         <span class="nn"><br>Wifi: {{currentWifi}}</span>
@@ -67,8 +69,10 @@
                     <div class="time-info">
                         <span class="label">Giờ kết thúc {{timeRealClockOut}}</span>
                     </div>
-                </div> -->
-                <div>
+                </div>
+
+
+                <!-- <div>
                     <div class="attendance-record">
                         <span class="at">Vào lúc {{clockInTime}}<br></span>
                         <span class="dc">{{currentLocation}}</span>
@@ -79,17 +83,18 @@
                         <span class="dc">{{currentLocation}}</span>
                         <span class="nn"><br>Wifi: {{currentWifi}}</span>
                     </div>
+                </div> -->
+            </div>
+        </div>
+            <div class="footer-box">
+                <div class="footer">
+                    <div class="footer-version">
+                        <p class="text-version" style="color: #034066;">Version </p> 
+                        <p style="color: #3485B7;">bitgroup.vn</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="footer">
-            <div class="footer-version">
-                <div class="version-app"><span style="color: #034066;">Version </span> <span
-                        style="color: #3485B7;">bitgroup.vn</span></div>
-            </div>
-        </div>
+        </div> 
     </div>
-
 </body>
-
 </html>
